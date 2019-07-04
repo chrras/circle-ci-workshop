@@ -32,10 +32,10 @@ jobs:
 
       # build the application image
       - run: docker build -t $DOCKER_USER/app:$CIRCLE_SHA1 .
-
+      - run: docker tag $DOCKER_USER/app:$CIRCLE_SHA1 $DOCKER_USER/app:latest
       # deploy the image
       - run: docker push $DOCKER_USER/app:$CIRCLE_SHA1
-            
+      - run: docker push $DOCKER_USER/app:latest
 workflows:
   version: 2
   two_job_flow:
