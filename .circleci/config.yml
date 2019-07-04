@@ -6,9 +6,9 @@ jobs:
     steps:
       - checkout:
       - run:
-        name: Test
-        command:
-          gradle test
+          name: Test
+          command:
+            gradle test
       - store_test_results:
           path: build/test-results
   package:
@@ -17,9 +17,9 @@ jobs:
     steps:
       - checkout:
       - run:
-        name: Jar
-        command:
-          gradle jar
+          name: Jar
+          command:
+            gradle jar
       - store_artifacts:
           path: build/libs
           destination: prefix
