@@ -10,4 +10,4 @@ jobs:
           command:
             gradle test
       - store_test_result:
-          path: test-results
+          path: build/test-results
