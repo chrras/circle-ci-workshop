@@ -11,3 +11,4 @@ jobs:
             gradle test
       - store_test_result:
           path: build/test-results
+
